@@ -1,4 +1,5 @@
 #include<everything>
+#include<boost/progress.hpp>
 typedef array<int,10> digit8;
 using array99 = array<array<int, 9>, 9>;
 array99 table;
@@ -97,6 +98,7 @@ int bfs(const digit8& src, const digit8& des)
 }
 int main()
 {
+	boost::progress_timer t;
 	init_table();
 	digit8 a{{2, 6, 4, 1, 3, 7, 0, 5, 8}};
 	digit8 b{{8, 1, 5, 7, 3, 6, 4, 0, 2}};
